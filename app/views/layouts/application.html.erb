@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+ <p class="alert alert-notice"><%= notice %></p>
+ 	
+ <p class="alert"><%= alert %></p>
 
 		
 			<div class="navbar navbar-inverse navbar-fixed-top ">
@@ -20,7 +24,7 @@
 	  			<div class="nav-collapse collapse">
           			<ul class="nav navbar-nav">
 			            <li><%= link_to "Estados", statuses_path %></li>
-			            <li><a href="#about">About</a></li>
+			            <li><%= link_to "logout", destroy_user_session_path, :method => :delete  %></li>
 			            <li><a href="#contact">Contact</a></li>
 		          </ul>
        			</div><!-- nav-collapse -->
