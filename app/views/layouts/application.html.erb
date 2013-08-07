@@ -18,14 +18,14 @@
 	  			<a href="#" class="navbar-brand">Treebook</a>
 	  			<div class="nav-collapse collapse">
           			<ul class="nav navbar-nav">
-			            <li><%= link_to "Estados", statuses_path %></li>
+			            <li><%= link_to "Estados", feed_path %></li>
 		          </ul>
 		          <ul class="nav navbar-nav pull-right">
 		          	<% if user_signed_in? %>
 		          	<li><%= link_to current_user.full_name, edit_user_registration_path  %></li>
 		          	<li><%= link_to "logout", destroy_user_session_path, :method => :delete  %></a></li><% else %>
-		          	<li><%= link_to "Register", new_user_registration_path %></a></li>
-			            <li><%= link_to "login", new_user_session_path %></a></li>
+		          	<li><%= link_to "Register", register_path %></a></li>
+			            <li><%= link_to "login", log_in_path %></a></li>
 			            <% end %>
 		          </ul>
        			</div><!-- nav-collapse -->
