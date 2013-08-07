@@ -1,17 +1,35 @@
-<h2>Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+<div class="row">
+	<div class="col-lg-4">
+
+<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name),html: {class: "well"}) do |f| %>
+
+	<legend>Sign in</legend>
+		<fieldset>
+<%= f.input :email, input_html: {class: "form-control"},label_html: {class: "control-label"} %>
+
+<%= f.input :password, input_html: {class: "form-control"},label_html: {class: "control-label"} %>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  	<%= f.input :remember_me, as: :boolean %>
+   
   <% end -%>
 
-  <div><%= f.submit "Sign in" %></div>
+  <div class="actions"><%= f.button :submit, value: 'Sign in' %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</fieldset>
+</div>
+<div class="col-lg-8">
+	<h2>Its Easy To Subscribe!</h2>
+	<p>
+Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.</p>
+<p>
+Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.</p>
+<p>
+The lysine contingency - it's intended to prevent the spread of the animals is case they ever got off the island. Dr. Wu inserted a gene that makes a single faulty enzyme in protein metabolism. The animals can't manufacture the amino acid lysine. Unless they're continually supplied with lysine by us, they'll slip into a coma and die.</p>
+
+</div>
+</div><!-- row -->
